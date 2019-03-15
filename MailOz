@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class MailOz {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		double weight = 0;
+		while (weight != -1) {
+			System.out.print("Enter a weights in ounce for letters to mail out.\n"
+					+ "When you are done entering, please enter -1 to finish: ");
+			weight = input.nextDouble();
+			if (weight < 1.0 && weight > 0)
+				System.out.println("You can use the forever stamp. ");
+			else if (weight > 1.0)
+				System.out.println("You will need additional postage. ");
+		}
+		System.out.print("Goodbye!");
+	}
+}
